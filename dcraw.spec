@@ -27,7 +27,7 @@ narzêdzia, które s± dostarczane przez producentów aparatów.
 cp %{SOURCE0} .
 
 %build
-%__cc -o dcraw %rpmcflags dcraw.c -lm
+%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} dcraw.c -lm
 
 %install
 rm -rf $RPM_BUILD_ROOT

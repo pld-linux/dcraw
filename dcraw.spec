@@ -1,14 +1,14 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl):	Dekoder zdjêæ cyfrowych w formacie raw
 Name:		dcraw
-Version:	20050901
+Version:	20050925
 Release:	1
 License:	Free + GPL (for some parts of code)
 Group:		Applications
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/dcraw.c
-# NoSource0-md5:	c8850f071988aac0dd46d6b00e5bda73
+# NoSource0-md5:	77ed8b203478b774b18f319a48e1c482
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/dcraw.1
-# NoSource1-md5:	e54055de8f14d76c678265ee7f6bb788
+# NoSource1-md5:	fc808b590e4d8430eb5c726d43b4b0e9
 URL:		http://www.cybercom.net/~dcoffin/dcraw/
 BuildRequires:	libjpeg-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

@@ -11,6 +11,7 @@ Source1:	http://www.cybercom.net/~dcoffin/dcraw/dcraw.1
 # NoSource1-md5:	9c091d19e6c4cc2d42b1b5624caf9dc5
 URL:		http://www.cybercom.net/~dcoffin/dcraw/
 BuildRequires:	libjpeg-devel
+BuildRequires:	lcms-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,7 +27,7 @@ zapisanych w formacie raw i produkuje przeno¶n± mapê pikseli (PPM).
 cp %{SOURCE0} .
 
 %build
-%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} dcraw.c -lm -ljpeg
+%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} dcraw.c -lm -ljpeg -llcms
 
 %install
 rm -rf $RPM_BUILD_ROOT

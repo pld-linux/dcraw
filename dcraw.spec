@@ -10,8 +10,8 @@ Source0:	http://www.cybercom.net/~dcoffin/dcraw/dcraw.c
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/dcraw.1
 # NoSource1-md5:	9c091d19e6c4cc2d42b1b5624caf9dc5
 URL:		http://www.cybercom.net/~dcoffin/dcraw/
-BuildRequires:	libjpeg-devel
 BuildRequires:	lcms-devel
+BuildRequires:	libjpeg-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

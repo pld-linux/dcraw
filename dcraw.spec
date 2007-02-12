@@ -2,7 +2,7 @@
 # - gimp plugin
 #
 Summary:	Raw Digital Photo Decoder
-Summary(pl):	Dekoder zdjêæ cyfrowych w formacie raw
+Summary(pl.UTF-8):   Dekoder zdjÄ™Ä‡ cyfrowych w formacie raw
 Name:		dcraw
 Version:	8.43
 Epoch:		1
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Dcraw is a program that decodes any raw image from digital cameras and
 produces portable pixel map (PPM).
 
-%description -l pl
-Dcraw jest programem, który dekoduje zdjêcia z aparatów cyfrowych
-zapisanych w formacie raw i produkuje przeno¶n± mapê pikseli (PPM).
+%description -l pl.UTF-8
+Dcraw jest programem, ktÃ³ry dekoduje zdjÄ™cia z aparatÃ³w cyfrowych
+zapisanych w formacie raw i produkuje przenoÅ›nÄ… mapÄ™ pikseli (PPM).
 
 %prep
 %setup -qcT

@@ -6,12 +6,11 @@ Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
 Version:	8.74
 Epoch:		1
-Release:	0.3
+Release:	1
 License:	Free + GPL (for some parts of code)
 Group:		Applications
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
 # Source0-md5:	c7db9ea7c7574f2c39ee24c5ae2f2565
-####Source0:	http://www.cybercom.net/~dcoffin/dcraw/dcraw.c
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
@@ -33,19 +32,13 @@ Dcraw jest programem, który dekoduje zdjęcia z aparatów cyfrowych
 zapisanych w formacie raw i produkuje przenośną mapę pikseli (PPM).
 
 %prep
-#%setup -qcT
 %setup -q -n %{name}
 cp %{SOURCE1} .
 cp %{SOURCE2} .
 cp %{SOURCE3} .
 
 %build
-#FIXME
-#%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall -DLOCALEDIR="%{_datadir}/locale/" dcraw.c -lm -ljpeg -llcms
-#%{__cc} %{rpmldflags} -o clean_crw %{rpmcflags} -Wall -DLOCALEDIR="%{_datadir}/locale/" clean_crw.c
-#%{__cc} %{rpmldflags} -o fujiturn %{rpmcflags} -Wall -DLOCALEDIR="%{_datadir}/locale/" fujiturn.c -D_16BIT
-#%{__cc} %{rpmldflags} -o fuji_green %{rpmcflags} -Wall -DLOCALEDIR="%{_datadir}/locale/" fuji_green.c -lm
-%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall dcraw.c -lm -ljpeg -llcms
+%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw.c -lm -ljpeg -llcms
 %{__cc} %{rpmldflags} -o clean_crw %{rpmcflags} -Wall clean_crw.c
 %{__cc} %{rpmldflags} -o fujiturn %{rpmcflags} -Wall fujiturn.c -D_16BIT
 %{__cc} %{rpmldflags} -o fuji_green %{rpmcflags} -Wall fuji_green.c -lm

@@ -21,6 +21,7 @@ URL:		http://www.cybercom.net/~dcoffin/dcraw/
 BuildRequires:	gettext-devel
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel
+Requires:	FHS > 2.3-18
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

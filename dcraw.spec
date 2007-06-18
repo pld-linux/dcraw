@@ -12,11 +12,11 @@ Group:		Applications
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
 # Source0-md5:	43602865e73ef2e317b9e90f11cf2ebf
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
-# NoSource1-md5:	
+# NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
-# NoSource2-md5:	
+# NoSource2-md5:	bc4a56184a338f6c181b19535ba328a0
 Source3:	http://www.cybercom.net/~dcoffin/dcraw/fuji_green.c
-# NoSource3-md5:	
+# NoSource3-md5:	25c05a032d3eaf094b30b5b85feca78f
 URL:		http://www.cybercom.net/~dcoffin/dcraw/
 BuildRequires:	gettext-devel
 BuildRequires:	lcms-devel

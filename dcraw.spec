@@ -4,13 +4,13 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	8.76
+Version:	8.77
 Epoch:		1
 Release:	1
 License:	Free + GPL (for some parts of code)
 Group:		Applications
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	85819fb80d56f8e7d861cff0a80fdbbc
+# Source0-md5:	bcf6b477f46b99059f383a93f9f75e05
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c

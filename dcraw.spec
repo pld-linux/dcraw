@@ -4,13 +4,13 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	8.81
+Version:	8.82
 Epoch:		1
 Release:	1
 License:	Free + GPL (for some parts of code)
 Group:		Applications
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	56692a70ea61909b05cc2acc2615247d
+# Source0-md5:	cd77e5060fdb489def91c0356d150f90
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
@@ -52,7 +52,7 @@ install dcraw clean_crw fujiturn fuji_green $RPM_BUILD_ROOT%{_bindir}
 install dcraw.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 # Some fancy way for making this list automagically is needed, maybe:
-for lang in de eo es fr hu it pl pt ru zh_CN zh_TW zh_CN; do
+for lang in cs de eo es fr hu it pl pt ru zh_TW zh_CN; do
 	install -d $RPM_BUILD_ROOT%{_mandir}/$lang/man1
 	cp dcraw_$lang.1 $RPM_BUILD_ROOT%{_mandir}/$lang/man1/dcraw.1
 	install -d $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES
@@ -68,6 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
+%lang(cs) %{_mandir}/cs/man1/*
 %lang(de) %{_mandir}/de/man1/*
 %lang(eo) %{_mandir}/eo/man1/*
 %lang(es) %{_mandir}/es/man1/*

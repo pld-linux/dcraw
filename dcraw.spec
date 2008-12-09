@@ -4,20 +4,19 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	8.87
+Version:	8.89
 Epoch:		1
 Release:	2
 License:	Free + GPL (for some parts of code)
 Group:		Applications
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	a8aecc8e69a6fbb1dbe0944e4c5f1a76
+# Source0-md5:	20fe7765199f45bfe26bd0a35f4c392e
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
 # NoSource2-md5:	10e468e0eed5e772fb09f3b2590696f1
 Source3:	http://www.cybercom.net/~dcoffin/dcraw/fuji_green.c
 # NoSource3-md5:	e801331242f2acf805c0ce00f609fe8c
-Patch0:		%{name}-A900.patch
 URL:		http://www.cybercom.net/~dcoffin/dcraw/
 BuildRequires:	gettext-devel
 BuildRequires:	lcms-devel
@@ -38,7 +37,6 @@ zapisanych w formacie raw i produkuje przenośną mapę pikseli (PPM).
 cp %{SOURCE1} .
 cp %{SOURCE2} .
 cp %{SOURCE3} .
-%patch0 -p1
 
 %build
 %{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw.c -lm -ljpeg -llcms

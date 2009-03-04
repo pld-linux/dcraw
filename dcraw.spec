@@ -4,13 +4,13 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	8.91
+Version:	8.92
 Epoch:		1
 Release:	1
 License:	Free + GPL (for some parts of code)
 Group:		Applications
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	06ab626770e9144f144dc6bac296c44f
+# Source0-md5:	471718026afc6d31dc86126fc7e49913
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
@@ -52,9 +52,20 @@ install dcraw clean_crw fujiturn fuji_green $RPM_BUILD_ROOT%{_bindir}
 install dcraw.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 # Some fancy way for making this list automagically is needed, maybe:
-for lang in cs de eo es fr hu it pl pt ru zh_TW zh_CN; do
+for lang in ca cs de eo es fr hu it pl pt ru sv zh_TW ; do
 	install -d $RPM_BUILD_ROOT%{_mandir}/$lang/man1
 	cp dcraw_$lang.1 $RPM_BUILD_ROOT%{_mandir}/$lang/man1/dcraw.1
+	install -d $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES
+	msgfmt -o $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES/dcraw.mo dcraw_$lang.po
+done
+
+# For this languages is only manual:
+for lang in zh_CN; do
+	install -d $RPM_BUILD_ROOT%{_mandir}/$lang/man1
+	cp dcraw_$lang.1 $RPM_BUILD_ROOT%{_mandir}/$lang/man1/dcraw.1
+done
+# For languages there is only translation:
+for lang in nl; do
 	install -d $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES
 	msgfmt -o $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES/dcraw.mo dcraw_$lang.po
 done
@@ -68,6 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
+%lang(ca) %{_mandir}/ca/man1/*
 %lang(cs) %{_mandir}/cs/man1/*
 %lang(de) %{_mandir}/de/man1/*
 %lang(eo) %{_mandir}/eo/man1/*
@@ -78,5 +90,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_mandir}/pl/man1/*
 %lang(pt) %{_mandir}/pt/man1/*
 %lang(ru) %{_mandir}/ru/man1/*
+%lang(sv) %{_mandir}/sv/man1/*
 %lang(zh_CN) %{_mandir}/zh_CN/man1/*
 %lang(zh_TW) %{_mandir}/zh_TW/man1/*

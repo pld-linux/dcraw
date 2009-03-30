@@ -59,12 +59,12 @@ for lang in ca cs de eo es fr hu it pl pt ru sv zh_TW ; do
 	msgfmt -o $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES/dcraw.mo dcraw_$lang.po
 done
 
-# For this languages is only manual:
+# For this language there is only manual:
 for lang in zh_CN; do
 	install -d $RPM_BUILD_ROOT%{_mandir}/$lang/man1
 	cp dcraw_$lang.1 $RPM_BUILD_ROOT%{_mandir}/$lang/man1/dcraw.1
 done
-# For languages there is only translation:
+# For this language there is only translation:
 for lang in nl; do
 	install -d $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES
 	msgfmt -o $RPM_BUILD_ROOT%{_datadir}/locale/$lang/LC_MESSAGES/dcraw.mo dcraw_$lang.po

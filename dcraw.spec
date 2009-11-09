@@ -1,3 +1,6 @@
+# TODO:
+# - gimp plugin ?
+
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw

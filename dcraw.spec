@@ -10,7 +10,7 @@ Release:	1
 License:	Free + GPL (for some parts of code)
 Group:		Applications/Graphics
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	122ae8772398a764012e09d15fb9eabc
+# Source0-md5:	b6469a5ac64ac6e974022b00f09fb465
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c

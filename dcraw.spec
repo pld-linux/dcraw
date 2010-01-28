@@ -6,7 +6,7 @@ Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
 Version:	8.99
 Epoch:		1
-Release:	1
+Release:	2
 License:	Free + GPL (for some parts of code)
 Group:		Applications/Graphics
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz

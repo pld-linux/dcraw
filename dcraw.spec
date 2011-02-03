@@ -4,13 +4,13 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	9.05
+Version:	9.06
 Release:	1
 Epoch:		1
 License:	Free + GPL v2+ (for some parts of code)
 Group:		Applications/Graphics
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	b06ad99909ede5f1a129fa4b53d32e04
+# Source0-md5:	22921c24c697bbe43c1010f463176921
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
@@ -40,7 +40,7 @@ cp %{SOURCE2} .
 cp %{SOURCE3} .
 
 %build
-%{__cc} %{rpmldflags} -o dcraw/dcraw %{rpmcflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw/dcraw.c -lm -ljpeg -llcms
+%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw.c -lm -ljpeg -llcms
 %{__cc} %{rpmldflags} -o clean_crw %{rpmcflags} -Wall clean_crw.c
 %{__cc} %{rpmldflags} -o fujiturn %{rpmcflags} -Wall fujiturn.c -D_16BIT
 %{__cc} %{rpmldflags} -o fuji_green %{rpmcflags} -Wall fuji_green.c -lm
@@ -49,7 +49,7 @@ cp %{SOURCE3} .
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install dcraw/dcraw clean_crw fujiturn fuji_green $RPM_BUILD_ROOT%{_bindir}
+install dcraw clean_crw fujiturn fuji_green $RPM_BUILD_ROOT%{_bindir}
 install dcraw.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 for lpo in dcraw_*.po ; do

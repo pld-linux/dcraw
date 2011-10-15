@@ -4,13 +4,13 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	9.08
+Version:	9.11
 Release:	1
 Epoch:		1
 License:	Free + GPL v2+ (for some parts of code)
 Group:		Applications/Graphics
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	eb1d365c27495a513c0768b2f696ba66
+# Source0-md5:	d7a8ae133356d3a722d99e43982d3bf4
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
@@ -19,6 +19,7 @@ Source3:	http://www.cybercom.net/~dcoffin/dcraw/fuji_green.c
 # NoSource3-md5:	e801331242f2acf805c0ce00f609fe8c
 URL:		http://www.cybercom.net/~dcoffin/dcraw/
 BuildRequires:	gettext-devel
+BuildRequires:	jasper-devel
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel
 Requires:	FHS > 2.3-18
@@ -40,7 +41,7 @@ cp %{SOURCE2} .
 cp %{SOURCE3} .
 
 %build
-%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw.c -lm -ljpeg -llcms
+%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw.c -lm -ljasper -ljpeg -llcms
 %{__cc} %{rpmldflags} -o clean_crw %{rpmcflags} -Wall clean_crw.c
 %{__cc} %{rpmldflags} -o fujiturn %{rpmcflags} -Wall fujiturn.c -D_16BIT
 %{__cc} %{rpmldflags} -o fuji_green %{rpmcflags} -Wall fuji_green.c -lm

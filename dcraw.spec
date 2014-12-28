@@ -18,7 +18,7 @@ Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
 Source3:	http://www.cybercom.net/~dcoffin/dcraw/fuji_green.c
 # NoSource3-md5:	c100db2b972b68b44659ddd5740d016f
 URL:		http://www.cybercom.net/~dcoffin/dcraw/
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	jasper-devel
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel

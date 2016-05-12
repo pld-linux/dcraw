@@ -1,16 +1,13 @@
-# TODO:
-# - gimp plugin ?
-
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	9.26.0
+Version:	9.27.0
 Release:	1
 Epoch:		1
 License:	Free + GPL v2+ (for some parts of code)
 Group:		Applications/Graphics
 Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	693207b594b35c5038e09ea316287ed6
+# Source0-md5:	87ca3ec9d4e882f0d2250fed61b3326f
 Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
 Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
@@ -41,10 +38,10 @@ cp %{SOURCE2} .
 cp %{SOURCE3} .
 
 %build
-%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw.c -lm -ljasper -ljpeg -llcms
-%{__cc} %{rpmldflags} -o clean_crw %{rpmcflags} -Wall clean_crw.c
-%{__cc} %{rpmldflags} -o fujiturn %{rpmcflags} -Wall fujiturn.c -D_16BIT
-%{__cc} %{rpmldflags} -o fuji_green %{rpmcflags} -Wall fuji_green.c -lm
+%{__cc} %{rpmldflags} -o dcraw %{rpmcflags} %{rpmcppflags} -Wall -DLOCALEDIR=\"%{_datadir}/locale/\" dcraw.c -lm -ljasper -ljpeg -llcms
+%{__cc} %{rpmldflags} -o clean_crw %{rpmcflags} %{rpmcppflags} -Wall clean_crw.c
+%{__cc} %{rpmldflags} -o fujiturn %{rpmcflags} %{rpmcppflags} -Wall fujiturn.c -D_16BIT
+%{__cc} %{rpmldflags} -o fuji_green %{rpmcflags} %{rpmcppflags} -Wall fuji_green.c -lm
 
 %install
 rm -rf $RPM_BUILD_ROOT

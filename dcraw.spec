@@ -2,7 +2,7 @@ Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
 Version:	9.27.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	Free + GPL v2+ (for some parts of code)
 Group:		Applications/Graphics

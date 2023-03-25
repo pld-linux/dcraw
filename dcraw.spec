@@ -1,20 +1,20 @@
 Summary:	Raw Digital Photo Decoder
 Summary(pl.UTF-8):	Dekoder zdjęć cyfrowych w formacie raw
 Name:		dcraw
-Version:	9.27.0
-Release:	2
+Version:	9.28.0
+Release:	1
 Epoch:		1
 License:	Free + GPL v2+ (for some parts of code)
 Group:		Applications/Graphics
-Source0:	http://www.cybercom.net/~dcoffin/dcraw/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	87ca3ec9d4e882f0d2250fed61b3326f
-Source1:	http://www.cybercom.net/~dcoffin/dcraw/clean_crw.c
+Source0:	https://www.dechifro.org/dcraw/archive/%{name}-%{version}.tar.gz
+# Source0-md5:	e89175c1a7551a70744769049a139f9b
+Source1:	https://www.dechifro.org/dcraw/clean_crw.c
 # NoSource1-md5:	37b386fef86eef8768965e91ea0be9e6
-Source2:	http://www.cybercom.net/~dcoffin/dcraw/fujiturn.c
+Source2:	https://www.dechifro.org/dcraw/fujiturn.c
 # NoSource2-md5:	6d503302bb06f25d58ba031a54206f3b
-Source3:	http://www.cybercom.net/~dcoffin/dcraw/fuji_green.c
+Source3:	https://www.dechifro.org/dcraw/fuji_green.c
 # NoSource3-md5:	c100db2b972b68b44659ddd5740d016f
-URL:		http://www.cybercom.net/~dcoffin/dcraw/
+URL:		https://www.dechifro.org/dcraw/
 BuildRequires:	gettext-tools
 BuildRequires:	jasper-devel
 BuildRequires:	lcms-devel
